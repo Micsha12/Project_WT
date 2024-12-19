@@ -1,0 +1,5 @@
+Project at web technology 
+
+Project: Attendance Management System
+A web-based system to manage and monitor student attendance efficiently. Core functionalities include an admin panel to manage students and courses, a teacher portal to mark attendance, a student portal to view attendance, and automatic report generation.
+Technology: React for the frontend, Flask for the backend, and MySQL or MongoDB for the database.
