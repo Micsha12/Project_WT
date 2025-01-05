@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TextField, Button, Typography, Box } from '@mui/material';
 import authService from '../../services/authServices';
 
 const Login = () => {
@@ -18,23 +19,29 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <input
+    <Box sx={{ maxWidth: 400, mx: 'auto', mt: 5 }}>
+      <Typography variant="h4" gutterBottom>Login</Typography>
+      {error && <Typography color="error">{error}</Typography>}
+      <TextField
+        label="Email"
         type="email"
-        placeholder="Email"
+        fullWidth
+        margin="normal"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
-      <input
+      <TextField
+        label="Password"
         type="password"
-        placeholder="Password"
+        fullWidth
+        margin="normal"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button onClick={handleLogin}>Login</button>
-    </div>
+      <Button variant="contained" color="primary" fullWidth onClick={handleLogin}>
+        Login
+      </Button>
+    </Box>
   );
 };
 

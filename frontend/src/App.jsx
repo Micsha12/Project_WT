@@ -1,8 +1,13 @@
 import React from "react";
-import AppRoutes from "./routes"; // Ensure the path is correct
+import AppRoutes from "./routes";
+import Layout from "./components/Layout/Layout";
 
 const App = () => {
-  return <AppRoutes />;
+  return (
+    <Layout>
+      <AppRoutes />
+    </Layout>
+  );
 };
 
 export default App;

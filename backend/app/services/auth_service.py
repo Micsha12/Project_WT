@@ -1,7 +1,8 @@
 from flask import request, jsonify
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 from werkzeug.security import generate_password_hash, check_password_hash
-from app.models import db, User
+from app import db
+from app.models import User
 
 def register_user():
     data = request.get_json()
