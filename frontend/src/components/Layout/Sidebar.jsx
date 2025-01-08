@@ -14,6 +14,9 @@ const Sidebar = ({ drawerWidth, mobileOpen, handleDrawerToggle }) => {
       <ListItem button component={Link} to="/register">
         <ListItemText primary="Register" />
       </ListItem>
+      <ListItem button component={Link} to="/attendance"> {/* Add Attendance link */}
+        <ListItemText primary="Attendance" />
+      </ListItem>
       {/* Add more navigation items as needed */}
     </List>
   );
